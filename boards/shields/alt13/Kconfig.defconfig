@@ -1,0 +1,6 @@
+if SHIELD_ALT13
+
+config ZMK_KEYBOARD_NAME
+    default "alt13"
+
+endif

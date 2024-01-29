@@ -1,0 +1,8 @@
+file_format: 1
+id: alt13
+name: alt13
+type: shield
+requires:
+  - seeed_xiao
+features:
+  - keys
