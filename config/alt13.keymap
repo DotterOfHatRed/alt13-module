@@ -1,4 +1,4 @@
-#include <behaviors.dtsi>
+:include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
 #define BONE_L 0
@@ -64,7 +64,7 @@
 
         combo_layer {
             bindings = <
-                &kp BACKSPACE &lt NUMB_L S &kp A &kp T &kp RETURN
+                &kp BSPC &lt NUMB_L S &kp A &kp T &kp RETURN
                 &kp LSHIFT    &kp O &kp R &kp I &kp SPACE
                          &to BONE_L &mo SYMB_L &mo NAVI_L
             >;
@@ -73,7 +73,7 @@
         number_layer {
             bindings = <
                 &trans &none &td15 &td26 &trans
-                &trans &kp BACKSPACE &td37 &td48 &trans
+                &trans &kp BSPC &td37 &td48 &trans
                        &none &none &none
 
             >;
@@ -90,8 +90,8 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_bsp { timeout-ms = <50>; key-positions = <POS_A POS_O>; bindings = <&kp N>; layers = <COMB_L>; };
-        combo_del { timeout-ms = <50>; key-positions = <POS_A POS_I>; bindings = <&kp K>; layers = <COMB_L>; };
+        combo_bsp { timeout-ms = <50>; key-positions = <POS_A POS_O>; bindings = <&kp BSPC>; layers = <COMB_L>; };
+        combo_del { timeout-ms = <50>; key-positions = <POS_A POS_I>; bindings = <&kp DELETE>; layers = <COMB_L>; };
 
         combo_n { timeout-ms = <50>; key-positions = <POS_S POS_T>; bindings = <&kp N>; layers = <COMB_L>; };
         combo_k { timeout-ms = <50>; key-positions = <POS_O POS_I>; bindings = <&kp K>; layers = <COMB_L>; };
