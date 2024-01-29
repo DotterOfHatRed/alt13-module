@@ -18,5 +18,5 @@
 #
 ---
 include:
-  - board: seeed_xiao
+  - board: adafruit_qt_py_rp2040
     shield: alt13
