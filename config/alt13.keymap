@@ -31,7 +31,7 @@
         
         base2_layer {
             bindings = <
-                &kp TAB &kp LEFT_BRACKET &trans &RIGHT_BRACKET &kp F
+                &kp TAB &kp LEFT_BRACKET &trans &kp RIGHT_BRACKET &kp F
                 &trans  &trans           &trans &trans         &trans 
                         &to COMB_L       &to DONE_L &trans
             >;
