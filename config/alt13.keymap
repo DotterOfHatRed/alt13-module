@@ -1,0 +1,59 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define BONE_L 0
+#define BTWO_L 1
+#define COMB_L 2
+#define SYMB_L 3
+#define NAVI_L
+
+#define POS_A 0
+#define POS_R 1
+#define POS_S 2
+#define POS_T 3
+#define POS_N 5
+#define POS_E 6
+#define POS_I 7
+#define POS_O 8
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+            bindings = <
+                &kp LSHIFT       &kp Q    &kp W     &kp E     &kp R
+                &lt BTWO_L ESC   &kp A    &kp S     &kp D     &kp SPACE 
+                                 &kp C    &kp V     &kp LCTRL    
+            >;
+        };
+        
+        base2_layer {
+            bindings = <
+                &kp TAB &kp LEFT_BRACKET &trans &RIGHT_BRACKET &kp F
+                &trans  &trans           &trans &trans         &trans 
+                        &to COMB_L       &to DONE_L &trans
+            >;
+        };
+
+        combo_layer {
+            bindings = <
+                &kp A &kp R &kp S &kp T &kp RETURN
+                &kp N &kp E &kp I &kp O &kp SPACE
+                      &to BONE_L &mo SYMB_L &mo NAVI_L
+            >;
+        };
+
+        symbol_layer {
+            bindings = <
+
+            >;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_b { timeout-ms = <50>; key-positions = <POS_A POS_R>; bindings = <&kp ESC> };
+    };
+};
+
