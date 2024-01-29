@@ -4,20 +4,45 @@
 #define BONE_L 0
 #define BTWO_L 1
 #define COMB_L 2
-#define SYMB_L 3
+#define NUMB_L 3
+#define SYMB_L 4
 #define DONE_L 0
 #define NAVI_L 0
 
-#define POS_A 0
-#define POS_R 1
-#define POS_S 2
+#define POS_S 1
+#define POS_A 2
 #define POS_T 3
-#define POS_N 5
-#define POS_E 6
-#define POS_I 7
-#define POS_O 8
+#define POS_O 6
+#define POS_R 7
+#define POS_I 8
 
 / {
+    behaviors {
+        td15: tap_dance_1_5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp N5>;
+        };
+        td26: tap_dance_2_6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N2>, <&kp N6>;
+        };
+        td37: tap_dance_3_7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N3>, <&kp N7>;
+        };
+        td48: tap_dance_4_8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N4>, <&kp N8>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,9 +64,18 @@
 
         combo_layer {
             bindings = <
-                &kp A &kp R &kp S &kp T &kp RETURN
-                &kp N &kp E &kp I &kp O &kp SPACE
-                      &to BONE_L &mo SYMB_L &mo NAVI_L
+                &kp BACKSPACE &lt NUMB_L S &kp A &kp T &kp RETURN
+                &kp LSHIFT    &kp O &kp R &kp I &kp SPACE
+                         &to BONE_L &mo SYMB_L &mo NAVI_L
+            >;
+        };
+
+        number_layer {
+            bindings = <
+                &trans &none &td15 &td26 &trans
+                &trans &kp BACKSPACE &td37 &td48 &trans
+                       &none &none &none
+
             >;
         };
 
@@ -56,7 +90,31 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_b { timeout-ms = <50>; key-positions = <POS_A POS_R>; bindings = <&kp B>; layers = <COMB_L>};
+        combo_bsp { timeout-ms = <50>; key-positions = <POS_A POS_O>; bindings = <&kp N>; layers = <COMB_L>; };
+        combo_del { timeout-ms = <50>; key-positions = <POS_A POS_I>; bindings = <&kp K>; layers = <COMB_L>; };
+
+        combo_n { timeout-ms = <50>; key-positions = <POS_S POS_T>; bindings = <&kp N>; layers = <COMB_L>; };
+        combo_k { timeout-ms = <50>; key-positions = <POS_O POS_I>; bindings = <&kp K>; layers = <COMB_L>; };
+        combo_e { timeout-ms = <50>; key-positions = <POS_A POS_T>; bindings = <&kp E>; layers = <COMB_L>; };
+        combo_u { timeout-ms = <50>; key-positions = <POS_S POS_A>; bindings = <&kp U>; layers = <COMB_L>; };
+        combo_c { timeout-ms = <50>; key-positions = <POS_O POS_R>; bindings = <&kp C>; layers = <COMB_L>; };
+        combo_d { timeout-ms = <50>; key-positions = <POS_R POS_I>; bindings = <&kp D>; layers = <COMB_L>; };
+        combo_h { timeout-ms = <50>; key-positions = <POS_S POS_I>; bindings = <&kp H>; layers = <COMB_L>; };
+        combo_g { timeout-ms = <50>; key-positions = <POS_T POS_O>; bindings = <&kp G>; layers = <COMB_L>; };
+        combo_b { timeout-ms = <50>; key-positions = <POS_S POS_O>; bindings = <&kp B>; layers = <COMB_L>; };
+        combo_l { timeout-ms = <50>; key-positions = <POS_A POS_R>; bindings = <&kp L>; layers = <COMB_L>; };
+        combo_j { timeout-ms = <50>; key-positions = <POS_T POS_I>; bindings = <&kp J>; layers = <COMB_L>; };
+        combo_f { timeout-ms = <50>; key-positions = <POS_S POS_R>; bindings = <&kp F>; layers = <COMB_L>; };
+        combo_p { timeout-ms = <50>; key-positions = <POS_T POS_R>; bindings = <&kp R>; layers = <COMB_L>; };
+        combo_v { timeout-ms = <50>; key-positions = <POS_S POS_A POS_I>; bindings = <&kp V>; layers = <COMB_L>; };
+        combo_x { timeout-ms = <50>; key-positions = <POS_S POS_R POS_I>; bindings = <&kp X>; layers = <COMB_L>; };
+        combo_y { timeout-ms = <50>; key-positions = <POS_O POS_R POS_T>; bindings = <&kp Y>; layers = <COMB_L>; };
+        combo_q { timeout-ms = <50>; key-positions = <POS_S POS_O POS_I>; bindings = <&kp Q>; layers = <COMB_L>; };
+        combo_z { timeout-ms = <50>; key-positions = <POS_T POS_O POS_I>; bindings = <&kp Z>; layers = <COMB_L>; };
+        combo_w { timeout-ms = <50>; key-positions = <POS_S POS_T POS_R>; bindings = <&kp W>; layers = <COMB_L>; };
+        combo_m { timeout-ms = <50>; key-positions = <POS_S POS_A POS_T>; bindings = <&kp M>; layers = <COMB_L>; };
+        combo_esc { timeout-ms = <50>; key-positions = <POS_A POS_T POS_O>; bindings = <&kp ESC>; layers = <COMB_L>; };
+        combo_space { timeout-ms = <50>; key-positions = <POS_O POS_R POS_I>; bindings = <&kp SPACE>; layers = <COMB_L>; };
     };
 };
 
