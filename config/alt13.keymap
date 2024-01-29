@@ -6,7 +6,6 @@
 #define COMB_L 2
 #define SYMB_L 3
 #define NAVI_L
-
 #define POS_A 0
 #define POS_R 1
 #define POS_S 2
@@ -22,38 +21,49 @@
 
         base_layer {
             bindings = <
-                &kp LSHIFT       &kp Q    &kp W     &kp E     &kp R
-                &lt BTWO_L ESC   &kp A    &kp S     &kp D     &kp SPACE 
-                                 &kp C    &kp V     &kp LCTRL    
+&lt 1 ESCAPE  &kp Q  &kp W      &kp E
+&kp A         &kp S  &kp D      &kp R
+&kp C         &kp V  &kp LCTRL  &kp SPACE
+&kp LSHIFT
             >;
         };
-        
+
         base2_layer {
             bindings = <
-                &kp TAB &kp LEFT_BRACKET &trans &RIGHT_BRACKET &kp F
-                &trans  &trans           &trans &trans         &trans 
-                        &to COMB_L       &to DONE_L &trans
+&none    &kp LEFT_BRACKET  &trans  &kp RIGHT_BRACKET
+&trans   &trans            &trans  &kp F
+&to 2    &trans            &to 0   &trans
+&kp TAB
             >;
         };
 
         combo_layer {
             bindings = <
-                &kp A &kp R &kp S &kp T &kp RETURN
-                &kp N &kp E &kp I &kp O &kp SPACE
-                      &to BONE_L &mo SYMB_L &mo NAVI_L
+&kp A  &kp R  &kp S  &kp T
+&kp E  &kp I  &kp O  &kp RET
+&to 0  &mo 3  &mo 2  &kp SPACE
+&kp N
             >;
         };
 
         symbol_layer {
             bindings = <
-
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans
+&trans
             >;
         };
     };
 
     combos {
         compatible = "zmk,combos";
-        combo_b { timeout-ms = <50>; key-positions = <POS_A POS_R>; bindings = <&kp ESC> };
+
+        combo_b {
+            timeout-ms = <50>;
+            key-positions = <POS_A POS_R 12>;
+            bindings = <&kp ESC>;
+            layers = <2>;
+        };
     };
 };
-
