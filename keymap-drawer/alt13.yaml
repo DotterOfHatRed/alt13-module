@@ -1,20 +1,20 @@
 layout: {qmk_info_json: config/alt13.json}
 layers:
   base:
-  - [LSHIFT, Q, W, E, R]
   - - {t: ESC, h: base2}
-    - A
-    - S
-    - D
-    - SPACE
-  - [C, V, LCTRL]
+    - Q
+    - W
+    - E
+    - R
+  - [LSHIFT, A, S, D, V]
+  - [C, LCTRL, SPACE]
   base2:
-  - - TAB
+  - - {type: held}
     - '['
     - {t: ▽, type: trans}
     - ']'
     - F
-  - - {type: held}
+  - - {t: TAB, h: LS(TAB)}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -119,6 +119,9 @@ combos:
   l: [combo]
 - p: [2, 3, 6]
   k: ESC
+  l: [combo]
+- p: [2, 7, 6]
+  k: RETURN
   l: [combo]
 - p: [6, 7, 8]
   k: SPACE

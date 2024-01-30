@@ -113,7 +113,7 @@
         combo_l { timeout-ms = <50>; key-positions = <POS_A POS_R>; bindings = <&kp L>; layers = <COMB_L>; };
         combo_j { timeout-ms = <50>; key-positions = <POS_T POS_I>; bindings = <&kp J>; layers = <COMB_L>; };
         combo_f { timeout-ms = <50>; key-positions = <POS_S POS_R>; bindings = <&kp F>; layers = <COMB_L>; };
-        combo_p { timeout-ms = <50>; key-positions = <POS_T POS_R>; bindings = <&kp R>; layers = <COMB_L>; };
+        combo_p { timeout-ms = <50>; key-positions = <POS_T POS_R>; bindings = <&kp P>; layers = <COMB_L>; };
         combo_v { timeout-ms = <50>; key-positions = <POS_S POS_A POS_I>; bindings = <&kp V>; layers = <COMB_L>; };
         combo_x { timeout-ms = <50>; key-positions = <POS_S POS_R POS_I>; bindings = <&kp X>; layers = <COMB_L>; };
         combo_y { timeout-ms = <50>; key-positions = <POS_O POS_R POS_T>; bindings = <&kp Y>; layers = <COMB_L>; };
