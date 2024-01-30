@@ -94,7 +94,7 @@
         base2_layer {
             bindings = <
                 &trans &kp LEFT_BRACKET &trans &kp RIGHT_BRACKET &kp F
-                &as LS(TAB) TAB  &trans           &trans &trans         &trans 
+                AS(TAB) &trans           &kp X &trans         &trans 
                         &to COMB_L       &to DONE_L &trans
             >;
         };
@@ -181,6 +181,8 @@
 
         combo_nine { timeout-ms = <50>; key-positions = <POS_2 POS_3>; bindings = <AS(N9)>; layers = <NUMB_L>; };
         combo_zero { timeout-ms = <50>; key-positions = <POS_5 POS_6>; bindings = <AS(N0)>; layers = <NUMB_L>; };
+        combo_minus { timeout-ms = <50>; key-positions = <POS_2 POS_5>; bindings = <AS(MINUS)>; layers = <NUMB_L>; };
+        combo_equal { timeout-ms = <50>; key-positions = <POS_3 POS_6>; bindings = <AS(EQUAL)>; layers = <NUMB_L>; };
 
         combo_fnine { timeout-ms = <50>; key-positions = <POS_2 POS_3>; bindings = <&kp F9>; layers = <NUMB_L>; };
         combo_ften { timeout-ms = <50>; key-positions = <POS_5 POS_6>; bindings = <&kp F10>; layers = <NUMB_L>; };
