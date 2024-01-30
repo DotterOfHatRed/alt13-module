@@ -24,15 +24,19 @@ layers:
     - {t: ▽, type: trans}
   combo:
   - - BSPC
-    - {t: S, h: number}
+    - {t: S, h: numb}
     - A
-    - T
+    - {t: T, h: symb}
     - RETURN
-  - [LSHIFT, O, R, I, SPACE]
+  - - LSHIFT
+    - {t: O, h: func}
+    - R
+    - {t: I, h: punk}
+    - SPACE
   - - {t: base, h: toggle}
-    - symbol
-    - base
-  number:
+    - symb
+    - navi
+  numb:
   - - {t: ▽, type: trans}
     - {type: held}
     - '&td15'
@@ -44,12 +48,56 @@ layers:
     - '&td48'
     - {t: ▽, type: trans}
   - ['', '', '']
-  symbol:
-  - [A, R, S, T, RETURN]
-  - [N, E, I, O, SPACE]
-  - - {t: base, h: toggle}
-    - {t: symbol, type: held}
-    - base
+  symb:
+  - - {t: ▽, type: trans}
+    - {t: '`', h: LS(GRAVE)}
+    - {t: /, h: LS(SLASH)}
+    - {type: held}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: '[', h: LS(LEFT BRACKET)}
+    - {t: ']', h: LS(RIGHT BRACKET)}
+    - {t: \, h: LS(BACKSLASH)}
+    - {t: ▽, type: trans}
+  - ['', '', '']
+  punk:
+  - - {t: ▽, type: trans}
+    - {t: ., h: LS(DOT)}
+    - {t: ',', h: LS(COMMA)}
+    - ''
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ;, h: LS(SEMI)}
+    - {t: ':', h: LS(COLON)}
+    - {type: held}
+    - {t: ▽, type: trans}
+  - ['', '', '']
+  func:
+  - - {t: ▽, type: trans}
+    - ESC
+    - '&tdf15'
+    - '&tdf26'
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {type: held}
+    - '&tdf37'
+    - '&tdf48'
+    - {t: ▽, type: trans}
+  - ['', '', '']
+  navi:
+  - - {t: ▽, type: trans}
+    - HOME
+    - UP
+    - END
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - LEFT
+    - DOWN
+    - RIGHT
+    - {t: ▽, type: trans}
+  - - {t: combo, h: toggle}
+    - ''
+    - {type: held}
 combos:
 - p: [2, 6]
   k: BSPC
@@ -94,7 +142,7 @@ combos:
   k: F
   l: [combo]
 - p: [3, 7]
-  k: R
+  k: P
   l: [combo]
 - p: [1, 2, 8]
   k: V
@@ -126,3 +174,27 @@ combos:
 - p: [6, 7, 8]
   k: SPACE
   l: [combo]
+- p: [2, 3]
+  k: {t: '9', h: LS(9)}
+  l: [numb]
+- p: [7, 8]
+  k: {t: '0', h: LS(0)}
+  l: [numb]
+- p: [2, 3]
+  k: F9
+  l: [numb]
+- p: [7, 8]
+  k: F10
+  l: [numb]
+- p: [2, 7]
+  k: F11
+  l: [combo]
+- p: [3, 8]
+  k: F12
+  l: [combo]
+- p: [2, 6, 8]
+  k: {t: navi, h: toggle}
+  l: [combo]
+- p: [6, 8]
+  k: {t: combo, h: toggle}
+  l: [navi]
