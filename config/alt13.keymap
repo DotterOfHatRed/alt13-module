@@ -123,7 +123,7 @@
         combo_m { timeout-ms = <50>; key-positions = <POS_S POS_A POS_T>; bindings = <&kp M>; layers = <COMB_L>; };
 
         combo_esc { timeout-ms = <50>; key-positions = <POS_A POS_T POS_O>; bindings = <&kp ESC>; layers = <COMB_L>; };
-        combo_ret { timeout-ms = <50>; key-positions = <POS_A POS_R POS_O>; bindings = <&kp RETURN>; layers = <COMB_L>; }
+        combo_ret { timeout-ms = <50>; key-positions = <POS_A POS_R POS_O>; bindings = <&kp RETURN>; layers = <COMB_L>; };
         combo_space { timeout-ms = <50>; key-positions = <POS_O POS_R POS_I>; bindings = <&kp SPACE>; layers = <COMB_L>; };
     };
 };
