@@ -86,14 +86,14 @@
         base_layer {
             bindings = <
                 &lt BTWO_L ESC       &kp Q    &kp W     &kp E     &kp R
-                &kp LSHIFT    &kp A    &kp S     &kp D     &kp V
+                &kp LSHIFT    &kp A    &kp S     &kp D     &kp F
                                  &kp C    &kp LCTRL     &kp SPACE 
             >;
         };
         
         base2_layer {
             bindings = <
-                &trans &kp LEFT_BRACKET &trans &kp RIGHT_BRACKET &kp F
+                &trans &kp LEFT_BRACKET &trans &kp RIGHT_BRACKET &kp V
                 AS(TAB) &trans           &kp X &trans         &trans 
                         &to COMB_L       &to DONE_L &trans
             >;

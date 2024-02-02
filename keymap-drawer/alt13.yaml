@@ -16,7 +16,7 @@ layers:
     - F
   - - {t: TAB, h: LS(TAB)}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - X
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: combo, h: toggle}
@@ -179,6 +179,12 @@ combos:
   l: [numb]
 - p: [7, 8]
   k: {t: '0', h: LS(0)}
+  l: [numb]
+- p: [2, 7]
+  k: {t: '-', h: LS(MINUS)}
+  l: [numb]
+- p: [3, 8]
+  k: {t: '=', h: LS(EQUAL)}
   l: [numb]
 - p: [2, 3]
   k: F9
